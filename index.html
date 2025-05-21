@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina Principală</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      font-family: Arial, sans-serif;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bine ați venit pe site-ul meu!</h1>
+
+  <marquee behavior="scroll" direction="left">Acesta este un text care se derulează!</marquee>
+
+  <nav>
+    <a href="index.html">Acasă</a> |
+    <a href="about.html">Despre</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="https://www.google.com" target="_blank">Google</a>
+  </nav>
+
+  <h2>Imagine exemplu</h2>
+  <img src="poza.jpg" alt="O imagine frumoasă" width="300">
+
+  <h2>Tabel Exemplu</h2>
+  <table>
+    <tr><th>Nume</th><th>Vârstă</th></tr>
+    <tr><td>Ion</td><td>22</td></tr>
+    <tr><td>Maria</td><td>20</td></tr>
+  </table>
+
+  <h2>Listă ordonată</h2>
+  <ol>
+    <li>Primul pas</li>
+    <li>Al doilea pas</li>
+  </ol>
+
+  <h2>Applet Java</h2>
+  <applet code="Clock.class" width="150" height="150"></applet>
+
+  <h2>Video HTML5</h2>
+  <video controls width="300">
+    <source src="film.mp4" type="video/mp4">
+    Browserul nu suportă elementul video.
+  </video>
+
+  <h2>Audio HTML5</h2>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Browserul nu suportă elementul audio.
+  </audio>
+
+  <h2>Canvas HTML5</h2>
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(10, 10, 150, 75);
+  </script>
+
+  <h2>Video YouTube</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
+
