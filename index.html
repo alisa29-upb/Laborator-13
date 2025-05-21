@@ -1,76 +1,118 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Principală</title>
   <style>
     body {
       background-image: url('background.jpg');
-      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
     }
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
     }
-    th, td {
-      padding: 8px;
+    nav a {
+      color: #00f7ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    table {
+      background-color: white;
+      color: black;
+      margin: 10px 0;
+      width: 100%;
+    }
+    img {
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Bine ați venit pe site-ul meu!</h1>
+  <header>
+    <h1>Bine ați venit pe site-ul nostru interactiv!</h1>
+    <marquee>Explorați paginile, fiți curioși și învățați ceva nou!</marquee>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="about.html">Despre</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.google.com" target="_blank">Google</a>
+    </nav>
+  </header>
 
-  <marquee behavior="scroll" direction="left">Acesta este un text care se derulează!</marquee>
+  <section>
+    <h2>Galerie Foto</h2>
+    <img src="poza.jpg" alt="Peisaj" width="400">
+  </section>
 
-  <nav>
-    <a href="index.html">Acasă</a> |
-    <a href="about.html">Despre</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="https://www.google.com" target="_blank">Google</a>
-  </nav>
+  <section>
+    <h2>Informații utile într-un tabel</h2>
+    <table>
+      <tr><th>Nume</th><th>Vârstă</th><th>Oraș</th></tr>
+      <tr><td>Ion Popescu</td><td>22</td><td>București</td></tr>
+      <tr><td>Maria Ionescu</td><td>20</td><td>Cluj</td></tr>
+    </table>
+  </section>
 
-  <h2>Imagine exemplu</h2>
-  <img src="poza.jpg" alt="O imagine frumoasă" width="300">
+  <section>
+    <h2>Ce vei învăța aici?</h2>
+    <ol>
+      <li>Structura unui site</li>
+      <li>Elemente multimedia</li>
+      <li>Stilizare modernă</li>
+    </ol>
+  </section>
 
-  <h2>Tabel Exemplu</h2>
-  <table>
-    <tr><th>Nume</th><th>Vârstă</th></tr>
-    <tr><td>Ion</td><td>22</td></tr>
-    <tr><td>Maria</td><td>20</td></tr>
-  </table>
+  <section>
+    <h2>Media</h2>
+    <h3>Video HTML5</h3>
+    <video controls width="400">
+      <source src="film.mp4" type="video/mp4">
+    </video>
 
-  <h2>Listă ordonată</h2>
-  <ol>
-    <li>Primul pas</li>
-    <li>Al doilea pas</li>
-  </ol>
+    <h3>Audio HTML5</h3>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">
+    </audio>
 
-  <h2>Applet Java</h2>
-  <applet code="Clock.class" width="150" height="150"></applet>
+    <h3>Canvas: Desen în browser</h3>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid white;"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#00f7ff";
+      ctx.fillRect(20, 20, 250, 100);
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "black";
+      ctx.fillText("Salut!", 100, 80);
+    </script>
+  </section>
 
-  <h2>Video HTML5</h2>
-  <video controls width="300">
-    <source src="film.mp4" type="video/mp4">
-    Browserul nu suportă elementul video.
-  </video>
+  <section>
+    <h2>Surpriză video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-  <h2>Audio HTML5</h2>
-  <audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    Browserul nu suportă elementul audio.
-  </audio>
-
-  <h2>Canvas HTML5</h2>
-  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
-  <script>
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.fillStyle = "blue";
-    ctx.fillRect(10, 10, 150, 75);
-  </script>
-
-  <h2>Video YouTube</h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  <footer>
+    <p>&copy; 2025 Site Laborator PC II. Toate drepturile rezervate.</p>
+  </footer>
 </body>
 </html>
-
