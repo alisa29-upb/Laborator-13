@@ -1,9 +1,7 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Principală</title>
   <style>
     body {
@@ -11,7 +9,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
+      color: white;
       margin: 0;
       padding: 0;
     }
@@ -36,83 +34,112 @@
       border-radius: 10px;
     }
     table {
-      background-color: white;
-      color: black;
-      margin: 10px 0;
       width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
     }
-    img {
-      border-radius: 10px;
+    th, td {
+      padding: 12px;
+      border: 1px solid #fff;
+      text-align: center;
+    }
+    th {
+      background-color: #00f7ff;
+      color: black;
+    }
+    canvas {
+      border: 1px solid white;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bine ați venit pe site-ul nostru interactiv!</h1>
-    <marquee>Explorați paginile, fiți curioși și învățați ceva nou!</marquee>
+    <h1>Bine ați venit!</h1>
+    <marquee>Explorează HTML5 cu stil!</marquee>
     <nav>
       <a href="index.html">Acasă</a>
       <a href="about.html">Despre</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.google.com" target="_blank">Google</a>
+      <a href="clock.html">Ceas</a>
     </nav>
   </header>
 
   <section>
-    <h2>Galerie Foto</h2>
+    <h2>Galerie foto</h2>
     <img src="poza.jpg" alt="Peisaj" width="400">
   </section>
 
   <section>
-    <h2>Informații utile într-un tabel</h2>
+    <h2>Tabel de utilizatori</h2>
     <table>
-      <tr><th>Nume</th><th>Vârstă</th><th>Oraș</th></tr>
-      <tr><td>Ion Popescu</td><td>22</td><td>București</td></tr>
-      <tr><td>Maria Ionescu</td><td>20</td><td>Cluj</td></tr>
+      <tr>
+        <th>#</th>
+        <th>Nume</th>
+        <th>Vârstă</th>
+        <th>Oraș</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Ion Popescu</td>
+        <td>22</td>
+        <td>București</td>
+        <td>ion@example.com</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Maria Ionescu</td>
+        <td>21</td>
+        <td>Cluj</td>
+        <td>maria@cluj.ro</td>
+      </tr>
     </table>
   </section>
 
   <section>
-    <h2>Ce vei învăța aici?</h2>
+    <h2>Ce înveți aici?</h2>
     <ol>
-      <li>Structura unui site</li>
-      <li>Elemente multimedia</li>
-      <li>Stilizare modernă</li>
+      <li>HTML Structurat</li>
+      <li>Multimedia și tabele</li>
+      <li>Canvas și JavaScript</li>
     </ol>
   </section>
 
   <section>
-    <h2>Media</h2>
-    <h3>Video HTML5</h3>
-    <video controls width="400">
+    <h2>Elemente multimedia</h2>
+    <video controls width="300">
       <source src="film.mp4" type="video/mp4">
     </video>
-
-    <h3>Audio HTML5</h3>
     <audio controls>
       <source src="audio.mp3" type="audio/mpeg">
     </audio>
+  </section>
 
-    <h3>Canvas: Desen în browser</h3>
-    <canvas id="myCanvas" width="300" height="150" style="border:1px solid white;"></canvas>
+  <section>
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="300" height="100"></canvas>
     <script>
-      const canvas = document.getElementById("myCanvas");
-      const ctx = canvas.getContext("2d");
+      const c = document.getElementById("myCanvas");
+      const ctx = c.getContext("2d");
       ctx.fillStyle = "#00f7ff";
-      ctx.fillRect(20, 20, 250, 100);
-      ctx.font = "20px Arial";
+      ctx.fillRect(10, 10, 280, 80);
       ctx.fillStyle = "black";
-      ctx.fillText("Salut!", 100, 80);
+      ctx.font = "20px Arial";
+      ctx.fillText("HTML5 Canvas!", 70, 60);
     </script>
   </section>
 
   <section>
-    <h2>Surpriză video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    <h2>Video YouTube</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </section>
 
   <footer>
-    <p>&copy; 2025 Site Laborator PC II. Toate drepturile rezervate.</p>
+    <p>&copy; 2025 Laborator PC II</p>
   </footer>
 </body>
 </html>
