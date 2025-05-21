@@ -4,55 +4,103 @@
   <meta charset="UTF-8">
   <title>Pagina Principală</title>
   <style>
+    :root {
+      --primary-color: #000000; /* Text negru */
+      --background-color: rgba(255, 255, 255, 0.85); /* Fundal semi-transparent */
+      --border-color: #cccccc;
+      --hover-color: rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
     body {
       background-image: url('background.jpg');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
+      color: var(--primary-color);
       margin: 0;
       padding: 0;
     }
+    
     header, footer {
       background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
       padding: 20px;
+      color: white;
     }
+    
     nav a {
       color: #00f7ff;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
+    
     nav a:hover {
       text-decoration: underline;
     }
+    
     section {
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 20px;
+      background-color: var(--background-color);
+      margin: 20px auto;
       border-radius: 10px;
+      max-width: 1200px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--border-color);
     }
+    
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
     }
+    
     th, td {
       padding: 12px;
-      border: 1px solid #fff;
+      border: 1px solid var(--border-color);
       text-align: center;
     }
+    
     th {
       background-color: #00f7ff;
       color: black;
     }
-    canvas {
-      border: 1px solid white;
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
     }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    
+    canvas {
+      border: 1px solid var(--border-color);
+      background-color: white;
+    }
+    
     iframe {
       width: 100%;
       max-width: 560px;
+      height: 315px;
+      border: none;
+    }
+    
+    video, audio {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 5px;
+    }
+    
+    marquee {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px;
+      margin: 10px 0;
+      color: white;
     }
   </style>
 </head>
