@@ -6,10 +6,12 @@
   <title>Contact</title>
   <style>
     :root {
-      --primary-color: #000000;
-      --background-color: rgba(255, 255, 255, 0.9);
-      --accent-color: #0066cc;
-      --border-color: #dddddd;
+      --primary-color: #5E2B5E; /* Violet închis - text principal */
+      --background-color: rgba(255, 245, 252, 0.95); /* Roz pal - fundal formular */
+      --accent-color: #D67AB1; /* Roz jucăuș - buton */
+      --border-color: #E8C1D6; /* Roz deschis - borduri */
+      --hover-color: #BF5F8A; /* Roz închis - hover buton */
+      --text-light: #7A3E64; /* Violet deschis - pentru etichete */
     }
     
     body {
@@ -33,11 +35,11 @@
     form {
       background-color: var(--background-color);
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 15px;
       width: 100%;
       max-width: 400px;
       margin: 0 auto;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 20px rgba(94, 43, 94, 0.15);
       border: 1px solid var(--border-color);
     }
     
@@ -45,53 +47,78 @@
       margin-top: 0;
       text-align: center;
       color: var(--primary-color);
+      font-size: 28px;
+      margin-bottom: 25px;
+      font-weight: 600;
     }
     
     label {
       display: block;
       margin-top: 15px;
-      font-weight: bold;
+      font-weight: 500;
+      color: var(--text-light);
     }
     
     input, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 12px 15px;
       margin-top: 8px;
-      border: 1px solid var(--border-color);
-      border-radius: 5px;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
       box-sizing: border-box;
       font-family: inherit;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(214, 122, 177, 0.2);
     }
     
     textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 120px;
     }
     
     button {
       background-color: var(--accent-color);
       color: white;
       border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      margin-top: 15px;
-      font-weight: bold;
+      padding: 14px 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-weight: 600;
       width: 100%;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
+      font-size: 16px;
+      letter-spacing: 0.5px;
     }
     
     button:hover {
-      background-color: #004d99;
+      background-color: var(--hover-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(214, 122, 177, 0.3);
     }
     
     @media (max-width: 480px) {
       form {
-        padding: 20px;
+        padding: 25px;
+        border-radius: 12px;
+      }
+      
+      h2 {
+        font-size: 24px;
       }
       
       input, textarea {
-        padding: 10px;
+        padding: 10px 12px;
+      }
+      
+      button {
+        padding: 12px 18px;
       }
     }
   </style>
@@ -110,7 +137,7 @@
       <label for="message">Mesaj:</label>
       <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Trimite</button>
+      <button type="submit">Trimite mesaj</button>
     </form>
   </div>
 </body>
