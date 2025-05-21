@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Despre</title>
+  <title>Despre noi</title>
   <style>
     :root {
-      --primary-color: #000000; /* Text negru */
-      --background-color: rgba(255, 255, 255, 0.85); /* Fundal semi-transparent */
-      --link-color: #0066cc; /* Culoare link-uri */
-      --border-radius: 10px;
+      --primary-color: #5E2B5E; /* Violet profund - text principal */
+      --background-color: rgba(255, 245, 252, 0.95); /* Roz pal - fundal */
+      --accent-color: #D67AB1; /* Roz delicat - butoane */
+      --border-color: #E8C1D6; /* Roz perlat - borduri */
+      --hover-color: #BF5F8A; /* Roz închis - hover */
+      --text-soft: #7A3E64; /* Violet deschis - text secundar */
     }
     
     body {
       background-image: url('background.jpg');
       background-size: cover;
       background-attachment: fixed;
-      font-family: 'Arial', sans-serif;
+      background-position: center;
+      font-family: 'Playfair Display', serif, 'Arial', sans-serif;
       color: var(--primary-color);
       margin: 0;
       padding: 0;
@@ -24,73 +27,124 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      line-height: 1.7;
     }
     
     .container {
       background-color: var(--background-color);
       margin: 40px;
-      padding: 40px;
+      padding: 50px;
       max-width: 700px;
-      border-radius: var(--border-radius);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(94, 43, 94, 0.15);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(3px);
+      text-align: center;
     }
     
     h1 {
-      margin-top: 0;
+      margin: 0 0 30px 0;
       color: var(--primary-color);
-      text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    h1:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--hover-color));
+      border-radius: 3px;
     }
     
     p {
-      line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      color: var(--text-soft);
+    }
+    
+    .signature {
+      font-style: italic;
+      font-weight: 500;
+      margin-top: 40px;
+      color: var(--primary-color);
+      font-size: 1.2rem;
     }
     
     nav {
-      margin-top: 30px;
-      text-align: center;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     
     nav a {
-      color: var(--link-color);
-      margin: 0 15px;
+      color: white;
+      background-color: var(--accent-color);
       text-decoration: none;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: var(--border-radius);
-      transition: all 0.3s ease;
+      font-weight: 500;
+      padding: 12px 25px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      box-shadow: 0 3px 10px rgba(214, 122, 177, 0.3);
+      border: 1px solid var(--border-color);
     }
     
     nav a:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-      text-decoration: underline;
+      background-color: var(--hover-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(191, 95, 138, 0.4);
+      text-decoration: none;
     }
     
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .container {
-        margin: 20px;
-        padding: 25px;
+        margin: 30px 20px;
+        padding: 40px 30px;
+        border-radius: 15px;
       }
       
       h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
       }
       
       nav a {
-        display: block;
-        margin: 10px 0;
+        width: 80%;
+        text-align: center;
       }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Despre site</h1>
-    <p>Site-ul este realizat în cadrul laboratorului 13 - PC II. Scopul lui este de a demonstra cunoștințele HTML5, CSS și elemente JavaScript.</p>
-    <p>Autor: Alisa Bordeanu</p>
-    <p>Data: Mai 2025</p>
+    <h1>Despre noi</h1>
+    <p>Site-ul este realizat cu pasiune și atenție la detalii în cadrul laboratorului 13 - PC II. Scopul său este de a demonstra cunoștințele avansate de HTML5, CSS și JavaScript într-un design rafinat.</p>
+    <p>Fiecare element a fost gândit pentru a crea o experiență plăcută și memorabilă.</p>
+    
+    <div class="signature">
+      <p>Cu drag,</p>
+      <p>Alisa Bordeanu</p>
+      <p>Mai 2025</p>
+    </div>
     
     <nav>
       <a href="index.html">Acasă</a>
